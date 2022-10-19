@@ -1,0 +1,9 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Doug Hahn'
+theme = 'doughahn'
+[markup.goldmark.renderer]
+unsafe= true
+[taxonomies]
+  tag = "tags"
+  category = "categories"

@@ -1,0 +1,24 @@
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Doug Hahn</title>
+  <meta name="description" content="I'm a certified Project Management Professional with an MFA in poetry. I have skills in web &amp; app development, content design, documentation, writing, marketing, and communication. My trifecta is accountability, compassion, and hands-on experience.">
+  <meta name="author" content="Doug Hahn">
+
+  <meta property="og:title" content="Doug Hahn">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://doughahn.net">
+  <meta property="og:description" content="I'm a certified Project Management Professional with an MFA in poetry. I have skills in web &amp; app development, content design, documentation, writing, marketing, and communication. My trifecta is accountability, compassion, and hands-on experience.">
+  <!-- <meta property="og:image" content=""> -->
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Typekit -->
+  <link rel="stylesheet" href="https://use.typekit.net/btk2gco.css">
+
+  <!-- SCSS Pipeline -->
+  {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+  <body>

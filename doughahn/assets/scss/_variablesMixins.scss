@@ -1,0 +1,159 @@
+// Webfonts
+
+// doves
+@font-face {
+    font-family: 'DovesType-Regular';
+    src: url('/fonts/DovesType-Regular.eot');
+    src: url('/fonts/DovesType-Regular.eot') format('embedded-opentype'),
+         url('/fonts/DovesType-Regular.woff2') format('woff2'),
+         url('/fonts/DovesType-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// GT Ultra
+@font-face {
+    font-family: 'GT-Ultra-Regular';
+    src: url('/fonts/GT-Ultra-Standard-Regular');
+    src: url('/fonts/GT-Ultra-Standard-Regular.woff2') format('woff2'),
+         url('/fonts/GT-Ultra-Standard-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT-Ultra-Regular-Bold';
+    src: url('/fonts/GT-Ultra-Standard-Bold');
+    src: url('/fonts/GT-Ultra-Standard-Bold.woff2') format('woff2'),
+         url('/fonts/GT-Ultra-Standard-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sans {
+  font-family: 'GT-Ultra-Regular', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.sansBold {
+  font-family: 'GT-Ultra-Bold', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.bodyFont {
+  font-family: DovesType-Regular, serif;
+  font-feature-settings: "kern" 1;
+  font-feature-settings: "lnum" 1;
+  font-kerning: normal;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.bodyFontItalic {
+  font-family: DovesType-Regular, serif;
+  font-feature-settings: "kern" 1;
+  font-feature-settings: "lnum" 1;
+  font-kerning: normal;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.logoFont {
+  font-family: 'GT-Ultra-Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;  
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-feature-settings: "lnum" 1;
+  font-kerning: normal;
+}
+
+.headlineFont {
+  font-family: DovesType-Regular, serif;
+  font-feature-settings: "kern" 1;
+  font-feature-settings: "lnum" 1;
+  font-kerning: normal;
+  font-weight: 400;
+  font-style: normal;  
+  text-rendering: optimizeLegibility;
+}
+
+// bp
+
+$breakpoints: (
+  small: 0px,
+  medium: 40em,
+  large: 65em,
+  xlarge: 75em, 
+  xxlarge: 90em
+);
+
+@mixin breakpoint($bp, $rule: min-width) {
+  @media screen and (#{$rule}: map-get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+// custom properties
+
+:root {
+  --light: #f2f0f2;
+  --dark: #212427;;
+  --transition: 200ms;
+}
+
+$light: #f2f0f2;
+
+
+// Type System
+
+:root {
+  /* set base values */
+  --text-base-size: 1.2rem;
+  --text-scale-ratio: 1.25;
+
+  /* type scale */
+  --text-xs: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(var(--text-base-size) / var(--text-scale-ratio));
+  --text-md: calc(var(--text-base-size));
+  --text-lg: calc(var(--text-base-size) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-huge: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+  --heading-line-height: 1.2;
+  --body-line-height: 1.4;
+  
+  @include breakpoint(medium) {
+      --text-base-size: 1.25em;
+      --text-scale-ratio: 1.25;
+  }
+}
+
+:root {
+    --baseline: 24px;
+  
+    /* spacing values */
+    --space-sm:   calc(var(--baseline)/2);
+    --space-md:   var(--baseline);
+    --space-lg:   calc(var(--baseline)*2);
+    --space-xl:   calc(var(--baseline)*3);
+}
+
+:root {
+    /* spacing values */
+    --space-xxxs: 0.25em;
+    --space-xxs:  0.375em;
+    --space-xs:   0.5em;
+    --space-sm:   0.75em;
+    --space-md:   1.25em;
+    --space-lg:   2em;
+    --space-xl:   3.25em;
+    --space-xxl:  5.25em;
+    --space-xxxl: 8.5em;
+}
+
+$transition: 300ms;

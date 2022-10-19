@@ -1,0 +1,59 @@
+html {
+  background-color: var( --light );
+}
+
+// body {
+//   max-width: 94%;
+//   height:100%;
+//   margin: 0 auto;
+//   overflow-x:hidden;
+// }
+
+
+
+// 12 column grid
+
+.grid {
+  display: grid;
+  max-width:100%;
+  margin:0 auto;
+  gap: 1.5rem;
+  grid-template-columns: 4fr 4fr;
+  margin-top:1.5rem;
+  @include breakpoint(xlarge) {
+    grid-template-columns: 3fr 4fr;
+    gap: 4rem;  
+    margin-top:1.6rem;
+  }
+}
+
+// .has-slideout {
+//   margin-left: 3rem;
+// }
+
+// .projectTitle {
+//   grid-column: span 2;
+// }
+
+article, aside {
+  grid-column: span 2;
+  @include breakpoint(large) {
+    grid-column: span 1;
+  }
+}
+
+.experience {
+  order: 2;
+  @include breakpoint(large) {
+    order: 1;
+  }
+}
+
+.about {
+  order: 1;
+  margin: 0 2%;
+  @include breakpoint(large) {
+    order: 2;
+  }
+}
+

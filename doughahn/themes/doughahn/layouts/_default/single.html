@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  {{- partial "head.html" . -}}
+<body>
+  {{- partial "header.html" . -}}
+      <section class="grid has-slideout">
+        <!-- {{ .Content }}     -->
+
+      <ul>
+       {{ range (where .Site.RegularPages.ByTitle "Section" "portfolio" ) }}
+        <li><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }} {{ .Params.years }}</a></li>
+      {{ end }}
+    </ul>
+      </section>
+<section class="grid" id="slideout">
+  <article class="experience">
+    <h2>Experience</h2>
+    <div class="row">
+      <h3>App Dev Project Manager</h3>
+      <dl>
+        <a href="#">
+          <dt>2015</dt>
+          <dd>Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.</dd>
+        </a>
+        <a href="#">
+          <dt>2015</dt>
+          <dd>Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.</dd>
+        </a>
+        <a href="#">
+          <dt>2014</dt>
+          <dd>Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.</dd>
+        </a>
+        <a href="#">
+          <dt>2020</dt>
+          <dd>Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.</dd>
+        </a>
+      </dl>
+    </div>
+    <div class="row">
+      <h3>Content Strategist</h3>
+      <dl>
+        <a href="#">
+          <dt>2015</dt>
+          <dd>Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.</dd>
+        </a>
+        <a href="#">
+          <dt>2015</dt>
+          <dd>Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.</dd>
+        </a>
+        <a href="#">
+          <dt>2014</dt>
+          <dd>Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.</dd>
+        </a>
+        <a href="#">
+          <dt>2020</dt>
+          <dd>Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.Guided leaders across 5 departments and senior engineering team to build $80k app that fully customized branded assets for national sales.</dd>
+        </a>
+      </dl>
+    </div>
+    <div class="row">
+      <h3>Education</h3>
+      <dl>
+        <a href=""><dt>1998-2003</dt>
+        <dd>BA English: Loyola University Chicago</dd></a>
+        <a href=""><dt>2003--2006</dt>
+        <dd>MFA: Sarah Lawrence College</dd></a>
+        <a href=""><dt>2021</dt>
+        <dd>PMP #3130172</dd></a>
+      </dl>
+    </div>
+  </article>
+  <button id="navButton-close" class="show"><span>Close</span></button>
+</section>
+    {{- partial "footer.html" . -}}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+              $('.show').click(function(){
+                  $('#slideout').toggleClass('on');
+                  $('#navButton-close').toggleClass('display-block');
+                  // $('.has-slideout').toggleClass('blur');
+              });
+            });
+        </script>
+        </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doug Hahn</title>
+    <link>/</link>
+    <description>Recent content on Doug Hahn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Apr 2022 14:21:52 -0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The titlee</title>
+      <link>/app-development/my-first-post/</link>
+      <pubDate>Sat, 16 Apr 2022 14:21:52 -0700</pubDate>
+      
+      <guid>/app-development/my-first-post/</guid>
+      <description>Post Contents  Bently Heritage   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu ligula non tellus dapibus volutpat. Donec ac commodo lacus. Nam ut congue elit, vitae rutrum sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu ligula non tellus dapibus volutpat. Donec ac commodo lacus. Nam ut congue elit, vitae rutrum sapien.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu ligula non tellus dapibus volutpat.</description>
+    </item>
+    
+  </channel>
+</rss>
